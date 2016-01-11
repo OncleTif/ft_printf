@@ -6,7 +6,7 @@
 #    By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 09:19:22 by tmanet            #+#    #+#              #
-#    Updated: 2016/01/08 09:32:28 by tmanet           ###   ########.fr        #
+#    Updated: 2016/01/11 10:32:16 by tmanet           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,8 +16,7 @@ CC = gcc
 
 FLAGS = -c -Wall -Wextra -Werror
 
-SRC =   ft_printf.c \
-		ft_error.c
+SRC =   ft_printf.c
 
 OBJ = $(SRC:.c=.o)
 
