@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/11 10:33:28 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/11 12:58:58 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/12 13:15:30 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,18 @@
 
 int	ft_printf(char *str, ...)
 {
-	int		i;
-	int		param_size;
-	t_list	*conv;
+	int			i;
+	t_list		*conv;
+	t_str_conv	*sub;
 
 	i = 0;
 	conv = ft_conv_lister();
-	while (str[i])
+	sub = ft_strsplit_to_conv(str);
+	while (sub)
 	{
-		if (str[i] == '%')
-		{
-			i++;
-			param_size = ft_param_size(str + i, conv);
-			i = i + param_size;
-		}
-		else
-			ft_putchar(str[i]);
-		i++;
+		ft_putstr(sub->str_in);
+		ft_putchar('\n');
+		sub = sub->next;
 	}
-	return (i);
+	return (5);
 }
