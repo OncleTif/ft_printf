@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/11 10:43:34 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/12 13:13:03 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/12 13:24:05 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ typedef struct		s_str_conv
 char				*str_in;
 char				*str_out;
 char				*opt;
-int					*size;
+size_t				size;
 struct s_str_conv	*next;
 }					t_str_conv;
 
