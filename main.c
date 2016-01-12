@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/11 10:55:55 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/11 11:32:17 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/12 15:18:55 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int main(int argc, char **argv)
 {
-	if (argc < 12)
+	if (argc >= 2)
 		ft_printf(argv[1], argv[2]);
 	return (0);
 }

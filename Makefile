@@ -6,7 +6,7 @@
 #    By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 09:19:22 by tmanet            #+#    #+#              #
-#    Updated: 2016/01/12 13:14:40 by tmanet           ###   ########.fr        #
+#    Updated: 2016/01/12 18:22:33 by tmanet           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = libftprintf.a
 
 CC = gcc
 
-FLAGS = -c -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra -Werror
 
 LIB = libft/libft.a
 
@@ -22,7 +22,9 @@ SRC =   ft_printf.c \
 		ft_param_size.c \
 		ft_conv_lister.c \
 		ft_putcountstr.c \
-		ft_strsplit_to_conv.c
+		ft_strsplit_to_conv.c \
+		ft_endof_opt.c \
+		ft_conv_picker.c
 
 OBJ = $(SRC:.c=.o)
 
@@ -37,7 +39,7 @@ $(NAME): $(LIB) $(OBJ)
 	@ranlib $(NAME)
 
 %.o: %.c $@
-	@$(CC) $(FLAGS) $<
+	@$(CC) $(FLAGS) -c $<
 	@echo "compilation de $<"
 
 clean:
@@ -54,4 +56,4 @@ $(LIB):
 re: fclean all
 
 test: all
-	gcc $(NAME) main.c
+	gcc $(NAME) $(FLAGS) main.c

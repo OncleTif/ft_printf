@@ -1,32 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_conv_picker.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/11 10:33:28 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/12 18:10:00 by tmanet           ###   ########.fr       */
+/*   Created: 2016/01/12 16:24:56 by tmanet            #+#    #+#             */
+/*   Updated: 2016/01/12 18:28:34 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_printf(char *str, ...)
+size_t	ft_conv_picker(char *str, t_str_conv **elem, t_conv *conv)
 {
-	int			i;
-	t_conv		*conv;
-	t_str_conv	*sub;
+	char	*end;
 
-	i = 0;
-	conv = ft_conv_lister();
-	sub = ft_strsplit_to_conv(str, conv);
-	while (sub)
+	end = NULL;
+	while (conv && !end)
 	{
-		ft_putstr(sub->str_in);
-		ft_putchar('\n');
-		i = i + sub->size;
-		sub = sub->next;
+		end = ft_strstr(str, conv->ltr);
+		conv = conv->next;
 	}
-	return (i);
+	if (!end)
+		return (0);
+	*elem->str_in = ft_strnew(end - str);
+	return (end - str);
 }
