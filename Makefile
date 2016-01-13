@@ -6,7 +6,7 @@
 #    By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 09:19:22 by tmanet            #+#    #+#              #
-#    Updated: 2016/01/12 18:22:33 by tmanet           ###   ########.fr        #
+#    Updated: 2016/01/13 16:01:41 by tmanet           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,11 +19,11 @@ FLAGS = -Wall -Wextra -Werror
 LIB = libft/libft.a
 
 SRC =   ft_printf.c \
-		ft_param_size.c \
 		ft_conv_lister.c \
 		ft_putcountstr.c \
 		ft_strsplit_to_conv.c \
-		ft_conv_picker.c
+		ft_conv_picker.c \
+		ft_str_picker.c
 
 
 OBJ = $(SRC:.c=.o)

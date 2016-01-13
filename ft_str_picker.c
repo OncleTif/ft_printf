@@ -1,24 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_str_picker.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/11 10:55:55 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/13 16:45:46 by tmanet           ###   ########.fr       */
+/*   Created: 2016/01/13 15:38:25 by tmanet            #+#    #+#             */
+/*   Updated: 2016/01/13 15:52:15 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int main(int argc, char **argv)
+size_t	ft_str_picker(char *str, t_str_conv **elem)
 {
-	int	i;
+	size_t	i;
+	t_str_conv	*sub;
 
 	i = 0;
-	if (argc >= 2)
-		i = ft_printf(argv[1]);
-	ft_putnbrendl(i);
-	return (0);
+	sub = *elem;
+	while (str[i] && str[i] != '%')
+		i++;
+	sub->str_out = ft_strncpy(ft_strnew(i), str, i);
+	if (!sub->str_out)
+		return (0);
+	sub->size = i;
+	return (i);
 }
