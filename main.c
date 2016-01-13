@@ -6,13 +6,13 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/11 10:55:55 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/13 16:45:46 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/13 17:50:05 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
 	int	i;
 

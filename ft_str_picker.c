@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/13 15:38:25 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/13 15:52:15 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/13 17:49:36 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_str_picker(char *str, t_str_conv **elem)
 {
-	size_t	i;
+	size_t		i;
 	t_str_conv	*sub;
 
 	i = 0;
