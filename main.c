@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/11 10:55:55 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/13 17:50:05 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/13 18:18:39 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@ int	main(int argc, char **argv)
 
 	i = 0;
 	if (argc >= 2)
-		i = ft_printf(argv[1]);
+		i = ft_printf(argv[1], "abc");
+	ft_putchar('\n');
 	ft_putnbrendl(i);
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/11 10:33:28 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/13 18:06:24 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/13 18:14:01 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	ft_printf(char *str, ...)
 	{
 		if (sub->str_out)
 			ft_putstr(sub->str_out);
-		ft_putchar('\n');
+//		ft_putchar('\n');
 		i = i + sub->size;
 		sub = sub->next;
 	}
