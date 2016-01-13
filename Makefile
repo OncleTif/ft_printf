@@ -23,8 +23,8 @@ SRC =   ft_printf.c \
 		ft_conv_lister.c \
 		ft_putcountstr.c \
 		ft_strsplit_to_conv.c \
-		ft_endof_opt.c \
 		ft_conv_picker.c
+
 
 OBJ = $(SRC:.c=.o)
 
@@ -56,4 +56,5 @@ $(LIB):
 re: fclean all
 
 test: all
-	gcc $(NAME) $(FLAGS) main.c
+	$(CC) $(FLAGS) -c main.c
+	gcc -L./ -lftprintf $(FLAGS) main.o ./libftprintf.a

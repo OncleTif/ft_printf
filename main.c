@@ -15,6 +15,6 @@
 int main(int argc, char **argv)
 {
 	if (argc >= 2)
-		ft_printf(argv[1], argv[2]);
+		ft_printf(argv[1]);
 	return (0);
 }

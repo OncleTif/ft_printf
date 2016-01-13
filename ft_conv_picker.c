@@ -15,8 +15,10 @@
 size_t	ft_conv_picker(char *str, t_str_conv **elem, t_conv *conv)
 {
 	char	*end;
+	t_str_conv	*sub;
 
 	end = NULL;
+	sub = *elem;
 	while (conv && !end)
 	{
 		end = ft_strstr(str, conv->ltr);
@@ -24,6 +26,6 @@ size_t	ft_conv_picker(char *str, t_str_conv **elem, t_conv *conv)
 	}
 	if (!end)
 		return (0);
-	*elem->str_in = ft_strnew(end - str);
+	sub->str_in = ft_strnew(end - str);
 	return (end - str);
 }
