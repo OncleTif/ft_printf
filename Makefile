@@ -6,7 +6,7 @@
 #    By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 09:19:22 by tmanet            #+#    #+#              #
-#    Updated: 2016/01/13 16:01:41 by tmanet           ###   ########.fr        #
+#    Updated: 2016/01/13 17:52:12 by tmanet           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,6 @@ LIB = libft/libft.a
 
 SRC =   ft_printf.c \
 		ft_conv_lister.c \
-		ft_putcountstr.c \
 		ft_strsplit_to_conv.c \
 		ft_conv_picker.c \
 		ft_str_picker.c
