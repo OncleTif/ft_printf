@@ -38,4 +38,5 @@ t_str_conv			*ft_strsplit_to_conv(char *str, t_conv *conv, va_list ap);
 int					ft_endof_opt(char *str, t_conv *conv);
 size_t				ft_conv_picker(char *str, t_str_conv **elem, t_conv *conv, va_list ap);
 size_t				ft_str_picker(char *str, t_str_conv **elem);
+char				*ft_conv_s(t_str_conv *sub, va_list ap);
 #endif

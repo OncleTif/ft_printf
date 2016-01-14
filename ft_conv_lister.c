@@ -20,5 +20,6 @@ t_conv	*ft_conv_lister(void)
 	if (!conv)
 		return (NULL);
 	conv->ltr = "s";
+	conv->f = &ft_conv_s;
 	return (conv);
 }

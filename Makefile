@@ -22,7 +22,8 @@ SRC =   ft_printf.c \
 		ft_conv_lister.c \
 		ft_strsplit_to_conv.c \
 		ft_conv_picker.c \
-		ft_str_picker.c
+		ft_str_picker.c \
+		ft_conv_s.c
 
 
 OBJ = $(SRC:.c=.o)
