@@ -25,7 +25,7 @@ t_str_conv	*ft_strsplit_to_conv(char *str, t_conv *conv, va_list ap)
 		if (!elem)
 			return (elem);
 		if (str[0] == '%')
-			i = ft_conv_picker(str + i, &elem, conv, ap);
+			i = ft_conv_picker(str + i + 1, &elem, conv, ap) + 1;
 		else
 			i = ft_str_picker(str + i, &elem);
 		if (!i)

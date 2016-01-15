@@ -20,10 +20,12 @@ LIB = libft/libft.a
 
 SRC =   ft_printf.c \
 		ft_conv_lister.c \
-		ft_strsplit_to_conv.c \
+		ft_newconv.c \
 		ft_conv_picker.c \
+		ft_strsplit_to_conv.c \
 		ft_str_picker.c \
-		ft_conv_s.c
+		ft_conv_s.c \
+		ft_conv_percent.c
 
 
 OBJ = $(SRC:.c=.o)

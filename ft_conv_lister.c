@@ -16,10 +16,9 @@ t_conv	*ft_conv_lister(void)
 {
 	t_conv	*conv;
 
-	conv = (t_conv*)ft_memalloc(sizeof(t_conv));
-	if (!conv)
-		return (NULL);
-	conv->ltr = "s";
-	conv->f = &ft_conv_s;
-	return (conv);
+	conv = NULL;
+	if ((conv = ft_newconv(conv, "%", &ft_conv_percent)))
+		if ((conv = ft_newconv(conv, "s", &ft_conv_s)))
+			return (conv);
+	return (NULL);
 }
