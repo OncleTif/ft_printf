@@ -19,6 +19,7 @@ t_conv	*ft_conv_lister(void)
 	conv = NULL;
 	if ((conv = ft_newconv(conv, "%", &ft_conv_percent)))
 		if ((conv = ft_newconv(conv, "s", &ft_conv_s)))
+		if ((conv = ft_newconv(conv, "c", &ft_conv_c)))
 			return (conv);
 	return (NULL);
 }

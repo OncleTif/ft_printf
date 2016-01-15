@@ -17,12 +17,16 @@ size_t	ft_conv_picker(char *str, t_str_conv **elem, t_conv *conv, va_list ap)
 	char		*end;
 	t_str_conv	*sub;
 
+	ft_putstr("chaine :");
+	ft_putendl(str);
 	end = NULL;
 	sub = *elem;
 	while (conv && !(end = ft_strstr(str, conv->ltr)))
 		conv = conv->next;
 	if (!conv)
 		return (0);
+	ft_putstr("pattern :");
+	ft_putendl(conv->ltr);
 	sub->opt = ft_strncpy(ft_strnew(end - str + ft_strlen(conv->ltr)),
 			str, end - str + ft_strlen(conv->ltr));
 	if (!sub->opt)

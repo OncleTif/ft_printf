@@ -25,6 +25,7 @@ SRC =   ft_printf.c \
 		ft_strsplit_to_conv.c \
 		ft_str_picker.c \
 		ft_conv_s.c \
+		ft_conv_c.c \
 		ft_conv_percent.c
 
 

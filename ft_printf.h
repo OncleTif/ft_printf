@@ -40,5 +40,6 @@ size_t				ft_conv_picker(char *str, t_str_conv **elem, t_conv *conv, va_list ap)
 size_t				ft_str_picker(char *str, t_str_conv **elem);
 t_conv				*ft_newconv(t_conv *nxt, char *ptn, char *(*f)(t_str_conv*, va_list));
 char				*ft_conv_s(t_str_conv *sub, va_list ap);
+char				*ft_conv_c(t_str_conv *sub, va_list ap);
 char				*ft_conv_percent(t_str_conv *sub, va_list ap);
 #endif
