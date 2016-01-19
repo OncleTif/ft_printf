@@ -6,13 +6,13 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/13 17:47:38 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/13 19:55:25 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/19 12:56:13 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-t_str_conv	*ft_strsplit_to_conv(char *str, t_conv *conv, va_list ap)
+t_str_conv	*ft_strsplit_to_conv(char *str, t_param *param, va_list ap)
 {
 	t_str_conv	*elem;
 	size_t		i;
@@ -25,12 +25,12 @@ t_str_conv	*ft_strsplit_to_conv(char *str, t_conv *conv, va_list ap)
 		if (!elem)
 			return (elem);
 		if (str[0] == '%')
-			i = ft_conv_picker(str + i + 1, &elem, conv, ap) + 1;
+			i = ft_conv_picker(str + i + 1, &elem, param, ap) + 1;
 		else
 			i = ft_str_picker(str + i, &elem);
 		if (!i)
 			return (NULL);
-		elem->next = ft_strsplit_to_conv(str + i, conv, ap);
+		elem->next = ft_strsplit_to_conv(str + i, param, ap);
 	}
 	return (elem);
 }

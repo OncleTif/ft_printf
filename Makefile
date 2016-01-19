@@ -6,7 +6,7 @@
 #    By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 09:19:22 by tmanet            #+#    #+#              #
-#    Updated: 2016/01/19 11:49:57 by tmanet           ###   ########.fr        #
+#    Updated: 2016/01/19 13:08:19 by tmanet           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,8 +19,11 @@ FLAGS = -Wall -Wextra -Werror
 LIB = libft/libft.a
 
 SRC =   ft_printf.c \
+		ft_param_builder.c \
 		ft_conv_lister.c \
+		ft_flag_lister.c \
 		ft_newconv.c \
+		ft_newflag.c \
 		ft_conv_picker.c \
 		ft_flag_picker.c \
 		ft_strsplit_to_conv.c \
