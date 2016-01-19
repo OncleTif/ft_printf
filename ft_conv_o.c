@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_flag_space.c                                    :+:      :+:    :+:   */
+/*   ft_conv_o.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/19 15:59:42 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/19 17:33:13 by tmanet           ###   ########.fr       */
+/*   Created: 2016/01/19 18:03:00 by tmanet            #+#    #+#             */
+/*   Updated: 2016/01/19 18:49:55 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-size_t	ft_flag_space(t_str_conv *sub, char * str)
+char	*ft_conv_o(t_str_conv *sub, va_list ap)
 {
-	if (str && !sub->plus)
-		sub->space = 1;
-	return (1);
+	sub->str_out = ft_uitoa_base(va_arg(ap, unsigned int), 8, 'a');
+	sub->size = ft_strlen(sub->str_out);
+	return (sub->str_out);
 }

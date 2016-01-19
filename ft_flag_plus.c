@@ -1,20 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_flag_space.c                                    :+:      :+:    :+:   */
+/*   ft_flag_plus.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/19 15:59:42 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/19 17:33:13 by tmanet           ###   ########.fr       */
+/*   Created: 2016/01/19 17:30:58 by tmanet            #+#    #+#             */
+/*   Updated: 2016/01/19 17:32:30 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-size_t	ft_flag_space(t_str_conv *sub, char * str)
+size_t	ft_flag_plus(t_str_conv *sub, char * str)
 {
-	if (str && !sub->plus)
-		sub->space = 1;
+	if (str)
+		sub->plus = 1;
+		sub->space = 0;
 	return (1);
 }
