@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/11 10:43:34 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/19 16:16:08 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/19 16:34:24 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,11 @@ typedef struct		s_str_conv
 {
 	char				error;
 	char				space;
+	char				point;
 	char				*str_out;
 	char				*opt;
 	size_t				size;
+	size_t				prec;
 	char*				type;
 	struct s_str_conv	*next;
 }					t_str_conv;
@@ -65,4 +67,5 @@ char				*ft_conv_c(t_str_conv *sub, va_list ap);
 char				*ft_conv_percent(t_str_conv *sub, va_list ap);
 size_t				ft_flag_picker(char *str, t_str_conv *sub, t_param *param);
 size_t				ft_flag_space(t_str_conv *sub, char *str);
+size_t				ft_flag_point(t_str_conv *sub, char *str);
 #endif

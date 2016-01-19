@@ -17,6 +17,7 @@ t_flag	*ft_flag_lister(void)
 	if ((flag = ft_newflag(flag, "-", NULL)))
 	if ((flag = ft_newflag(flag, "+", NULL)))
 	if ((flag = ft_newflag(flag, "0", NULL)))
+	if ((flag = ft_newflag(flag, ".", &ft_flag_point)))
 	if ((flag = ft_newflag(flag, " ", &ft_flag_space)))
 			return (flag);
 	return (NULL);
