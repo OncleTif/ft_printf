@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/11 10:43:34 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/19 13:39:21 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/19 14:01:51 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ typedef struct		s_flag
 typedef struct		s_conv
 {
 	char			*ltr;
+	size_t			size;
 	char			*(*f)(t_str_conv*, va_list);
 	struct s_conv	*next;
 }					t_conv;
