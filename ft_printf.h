@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/11 10:43:34 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/19 15:32:15 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/19 16:16:08 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 typedef struct		s_str_conv
 {
 	char				error;
+	char				space;
 	char				*str_out;
 	char				*opt;
 	size_t				size;
@@ -29,7 +30,7 @@ typedef struct		s_flag
 {
 	char			*ptn;
 	size_t			size;
-	int				(*f)(t_str_conv*);
+	size_t			(*f)(t_str_conv*, char*);
 	struct s_flag	*next;
 }					t_flag;
 
@@ -50,7 +51,7 @@ typedef struct		s_param
 int					ft_printf(char *str, ...);
 int					ft_param_size(char *str, t_list *conv);
 t_flag				*ft_flag_lister();
-t_flag				*ft_newflag(t_flag *nxt, char *ptn, int (*f)(t_str_conv*));
+t_flag				*ft_newflag(t_flag *nxt, char *ptn, size_t (*f)(t_str_conv*, char*));
 t_param				*ft_param_builder(void);
 t_conv				*ft_conv_lister();
 t_conv				*ft_newconv(t_conv *nxt, char *ptn, char *(*f)(t_str_conv*, va_list));
@@ -63,4 +64,5 @@ char				*ft_conv_s(t_str_conv *sub, va_list ap);
 char				*ft_conv_c(t_str_conv *sub, va_list ap);
 char				*ft_conv_percent(t_str_conv *sub, va_list ap);
 size_t				ft_flag_picker(char *str, t_str_conv *sub, t_param *param);
+size_t				ft_flag_space(t_str_conv *sub, char *str);
 #endif

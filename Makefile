@@ -6,7 +6,7 @@
 #    By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 09:19:22 by tmanet            #+#    #+#              #
-#    Updated: 2016/01/19 13:08:19 by tmanet           ###   ########.fr        #
+#    Updated: 2016/01/19 16:11:16 by tmanet           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,8 @@ NAME = libftprintf.a
 
 CC = gcc
 
-FLAGS = -Wall -Wextra -Werror
+//FLAGS = -Wall -Wextra -Werror
+FLAGS =
 
 LIB = libft/libft.a
 
@@ -28,6 +29,7 @@ SRC =   ft_printf.c \
 		ft_flag_picker.c \
 		ft_strsplit_to_conv.c \
 		ft_str_picker.c \
+		ft_flag_space.c \
 		ft_conv_s.c \
 		ft_conv_c.c \
 		ft_conv_percent.c

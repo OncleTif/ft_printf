@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_newflag.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2016/01/19 16:10:18 by tmanet            #+#    #+#             */
+/*   Updated: 2016/01/19 16:15:46 by tmanet           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
-t_flag	*ft_newflag(t_flag *nxt, char *ptn, int	(*f)(t_str_conv*))
+t_flag	*ft_newflag(t_flag *nxt, char *ptn, size_t	(*f)(t_str_conv*, char*))
 {
 	t_flag	*flag;
 

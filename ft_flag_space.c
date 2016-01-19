@@ -1,36 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_flag_picker.c                                   :+:      :+:    :+:   */
+/*   ft_flag_space.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/19 11:37:46 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/19 16:16:15 by tmanet           ###   ########.fr       */
+/*   Created: 2016/01/19 15:59:42 by tmanet            #+#    #+#             */
+/*   Updated: 2016/01/19 16:18:05 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-size_t	ft_flag_picker(char *str, t_str_conv *sub, t_param *param)
+size_t	ft_flag_space(t_str_conv *sub, char * str)
 {
-	size_t	i;
-	t_flag	*flag;
-
-	i = 0;
-	if (sub)
-	{
-		while (str[i])
-		{
-			flag = param->flag;
-			while (flag && !ft_strnequ(str + i, flag->ptn, flag->size))
-			{
-				flag = flag->next;
-			}
-			if (!flag)
-				return (i);
-			i = i + flag->f(sub, str + i);
-		}
-	}
-	return (0);
+	if (str)
+		sub->space = 1;
+	return (1);
 }
