@@ -8,6 +8,7 @@ t_flag	*ft_newflag(t_flag *nxt, char *ptn, int	(*f)(t_str_conv*))
 	if (!flag)
 		return (NULL);
 	flag->ptn = ptn;
+	flag->size = ft_strlen(ptn);
 	flag->f = f;
 	flag->next = nxt;
 	return (flag);

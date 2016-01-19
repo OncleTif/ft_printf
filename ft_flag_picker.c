@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/19 11:37:46 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/19 13:07:49 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/19 15:41:58 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,22 @@
 size_t	ft_flag_picker(char *str, t_str_conv *sub, t_param *param)
 {
 	size_t	i;
+	t_flag	*flag;
 
 	i = 0;
-	while (str[i] && param && sub)
+	if (sub)
 	{
-i++;
+		while (str[i])
+		{
+			flag = param->flag;
+			while (flag && !ft_strnequ(str + i, flag->ptn, flag->size))
+			{
+				flag = flag->next;
+			}
+			if (!flag)
+				return (i);
+			i = flag->f(sub);
+		}
 	}
-	return (i);
+	return (0);
 }

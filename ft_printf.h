@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/11 10:43:34 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/19 14:01:51 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/19 15:32:15 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ typedef struct		s_str_conv
 typedef struct		s_flag
 {
 	char			*ptn;
+	size_t			size;
 	int				(*f)(t_str_conv*);
 	struct s_flag	*next;
 }					t_flag;

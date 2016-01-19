@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/12 16:24:56 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/19 14:02:41 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/19 15:21:28 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,25 @@
 
 size_t	ft_conv_picker(char *str, t_str_conv **elem, t_param *param, va_list ap)
 {
-	char		*end;
 	t_str_conv	*sub;
 	t_conv		*conv;
+	size_t		i;
 
 //	ft_putstr("chaine :");
 //	ft_putendl(str);
-	end = NULL;
 	sub = *elem;
 	conv = param->conv;
-	while (conv && !(end = ft_strnstr(str, conv->ltr, conv->size)))
+	i = ft_flag_picker(str, sub, param);
+	while (conv && !(ft_strnequ(str + i, conv->ltr, conv->size)))
 		conv = conv->next;
 	if (!conv)
 		return (0);
 //	ft_putstr("pattern :");
 //	ft_putendl(conv->ltr);
-	sub->opt = ft_strncpy(ft_strnew(end - str + ft_strlen(conv->ltr)),
-			str, end - str + ft_strlen(conv->ltr));
+	sub->opt = ft_strncpy(ft_strnew(conv->size),
+			str + i, conv->size);
 	if (!sub->opt)
 		return (0);
 	sub->str_out = conv->f(sub, ap);
-	return (end - str + ft_strlen(conv->ltr));
+	return (i + conv->size);
 }
