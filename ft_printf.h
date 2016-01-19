@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/11 10:43:34 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/13 19:54:48 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/19 12:08:27 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,12 @@ typedef struct		s_conv
 	struct s_conv	*next;
 }					t_conv;
 
+typedef struct		s_param
+{
+	t_conv			*conv;
+	t_flag			*flag;
+}					t_param;
+
 int					ft_printf(char *str, ...);
 int					ft_param_size(char *str, t_list *conv);
 t_flag				*ft_flag_lister();
@@ -53,4 +59,5 @@ size_t				ft_str_picker(char *str, t_str_conv **elem);
 char				*ft_conv_s(t_str_conv *sub, va_list ap);
 char				*ft_conv_c(t_str_conv *sub, va_list ap);
 char				*ft_conv_percent(t_str_conv *sub, va_list ap);
+size_t				ft_flag_picker(char *str, t_str_conv *sub);
 #endif
