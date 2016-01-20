@@ -6,13 +6,13 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/19 17:35:53 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/19 17:36:09 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/20 15:40:32 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-size_t	ft_flag_hash(t_str_conv *sub, char * str)
+size_t	ft_flag_hash(t_str_conv *sub, char *str)
 {
 	if (str)
 		sub->hash = 1;

@@ -6,13 +6,13 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/19 17:31:14 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/19 17:31:32 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/20 15:43:56 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-size_t	ft_flag_minus(t_str_conv *sub, char * str)
+size_t	ft_flag_minus(t_str_conv *sub, char *str)
 {
 	if (str)
 		sub->minus = 1;

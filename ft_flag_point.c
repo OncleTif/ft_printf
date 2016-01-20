@@ -6,13 +6,13 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/19 16:32:53 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/19 16:44:28 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/20 15:44:52 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-size_t	ft_flag_point(t_str_conv *sub, char * str)
+size_t	ft_flag_point(t_str_conv *sub, char *str)
 {
 	size_t	i;
 	int		prec;
@@ -23,8 +23,8 @@ size_t	ft_flag_point(t_str_conv *sub, char * str)
 		i++;
 	prec = ft_atoi(str);
 	if (prec < 0)
-	sub->prec = -prec;
+		sub->prec = -prec;
 	else
-	sub->prec = prec;
+		sub->prec = prec;
 	return (i);
 }

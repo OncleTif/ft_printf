@@ -6,13 +6,13 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/19 16:10:18 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/19 16:15:46 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/20 15:46:16 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-t_flag	*ft_newflag(t_flag *nxt, char *ptn, size_t	(*f)(t_str_conv*, char*))
+t_flag	*ft_newflag(t_flag *nxt, char *ptn, size_t (*f)(t_str_conv*, char*))
 {
 	t_flag	*flag;
 
