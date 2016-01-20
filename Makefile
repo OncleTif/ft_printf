@@ -6,7 +6,7 @@
 #    By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 09:19:22 by tmanet            #+#    #+#              #
-#    Updated: 2016/01/19 18:54:58 by tmanet           ###   ########.fr        #
+#    Updated: 2016/01/20 18:17:35 by tmanet           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,6 +41,9 @@ SRC =   ft_printf.c \
 		ft_conv_o.c \
 		ft_conv_x.c \
 		ft_conv_u.c \
+		ft_conv_upd.c \
+		ft_conv_upo.c \
+		ft_conv_upu.c \
 		ft_conv_upx.c \
 		ft_conv_percent.c
 
