@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/11 10:43:34 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/21 14:21:59 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/21 18:53:04 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,13 @@ size_t				ft_flag_picker(char *str, t_str_conv *sub, t_param *param);
 size_t				ft_flag_space(t_str_conv *sub, char *str);
 size_t				ft_flag_point(t_str_conv *sub, char *str);
 size_t				ft_flag_zero(t_str_conv *sub, char *str);
+size_t				ft_flag_h(t_str_conv *sub, char *str);
+size_t				ft_flag_hh(t_str_conv *sub, char *str);
+size_t				ft_flag_j(t_str_conv *sub, char *str);
+size_t				ft_flag_l(t_str_conv *sub, char *str);
+size_t				ft_flag_ll(t_str_conv *sub, char *str);
 size_t				ft_flag_plus(t_str_conv *sub, char *str);
 size_t				ft_flag_minus(t_str_conv *sub, char *str);
 size_t				ft_flag_hash(t_str_conv *sub, char *str);
+size_t				ft_flag_z(t_str_conv *sub, char *str);
 #endif

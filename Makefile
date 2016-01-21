@@ -6,7 +6,7 @@
 #    By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 09:19:22 by tmanet            #+#    #+#              #
-#    Updated: 2016/01/21 14:22:47 by tmanet           ###   ########.fr        #
+#    Updated: 2016/01/21 18:53:24 by tmanet           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,12 +29,18 @@ SRC =   ft_printf.c \
 		ft_flag_picker.c \
 		ft_strsplit_to_conv.c \
 		ft_str_picker.c \
-		ft_flag_space.c \
-		ft_flag_point.c \
-		ft_flag_zero.c \
+		ft_flag_h.c \
 		ft_flag_hash.c \
-		ft_flag_plus.c \
+		ft_flag_hh.c \
+		ft_flag_j.c \
+		ft_flag_l.c \
+		ft_flag_ll.c \
 		ft_flag_minus.c \
+		ft_flag_plus.c \
+		ft_flag_point.c \
+		ft_flag_space.c \
+		ft_flag_z.c \
+		ft_flag_zero.c \
 		ft_conv_s.c \
 		ft_conv_c.c \
 		ft_conv_d.c \

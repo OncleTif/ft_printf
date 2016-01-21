@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/20 15:40:51 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/20 15:43:31 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/21 18:52:38 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,13 @@ t_flag	*ft_flag_lister(void)
 
 	grp = 0;
 	flag = NULL;
-	if ((flag = ft_newflag(flag, "l", NULL)))
-		if ((flag = ft_newflag(flag, "ll", NULL)))
-			if ((flag = ft_newflag(flag, "j", NULL)))
+		if ((flag = ft_newflag(flag, "l", &ft_flag_l)))
+		if ((flag = ft_newflag(flag, "ll", &ft_flag_ll)))
+			if ((flag = ft_newflag(flag, "j", &ft_flag_j)))
 				if ((flag = ft_newflag(flag, "t", NULL)))
-					if ((flag = ft_newflag(flag, "z", NULL)))
-						if ((flag = ft_newflag(flag, "h", NULL)))
-							if ((flag = ft_newflag(flag, "hh", NULL)))
+					if ((flag = ft_newflag(flag, "z", &ft_flag_z)))
+						if ((flag = ft_newflag(flag, "h", &ft_flag_h)))
+							if ((flag = ft_newflag(flag, "hh", &ft_flag_hh)))
 								grp = 1;
 	if (grp == 1 && (flag = ft_newflag(flag, "L", NULL)))
 		if ((flag = ft_newflag(flag, "#", &ft_flag_hash)))
