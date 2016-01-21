@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/11 12:13:22 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/20 18:18:26 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/21 14:22:27 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ t_conv	*ft_conv_lister(void)
 													&ft_conv_upx)))
 													if ((conv = ft_newconv(conv, "u", &ft_conv_u)))
 													if ((conv = ft_newconv(conv, "U", &ft_conv_upu)))
+													if ((conv = ft_newconv(conv, "p", &ft_conv_p)))
 						return (conv);
 	return (NULL);
 }

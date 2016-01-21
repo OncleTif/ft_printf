@@ -1,36 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_conv_p.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/11 10:55:55 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/21 14:25:01 by tmanet           ###   ########.fr       */
+/*   Created: 2016/01/21 14:20:35 by tmanet            #+#    #+#             */
+/*   Updated: 2016/01/21 14:21:29 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdio.h>
-#include <limits.h>
 
-int	main(int argc, char **argv)
+char	*ft_conv_p(t_str_conv *sub, va_list ap)
 {
-	int	i;
-
-	i = 0;
-	if (argc && argv)
-	{
-		;
-	}
-	//i = ft_printf(argv[1], "abc");
-	ft_putendl("printf");
-	i = printf("%p", &i);
-	ft_putchar('\n');
-	ft_putnbrendl(i);
-	ft_putendl("ft_printf");
-	i = ft_printf("%p", &i);
-	ft_putchar('\n');
-	ft_putnbrendl(i);
-	return (0);
+	sub->str_out = ft_uitoa_base(va_arg(ap, unsigned int), 16, 'a');
+	sub->size = ft_strlen(sub->str_out);
+	return (sub->str_out);
 }

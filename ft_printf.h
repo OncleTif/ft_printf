@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/11 10:43:34 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/20 18:18:23 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/21 14:21:59 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,7 @@ char				*ft_conv_x(t_str_conv *sub, va_list ap);
 char				*ft_conv_upx(t_str_conv *sub, va_list ap);
 char				*ft_conv_u(t_str_conv *sub, va_list ap);
 char				*ft_conv_upu(t_str_conv *sub, va_list ap);
+char				*ft_conv_p(t_str_conv *sub, va_list ap);
 char				*ft_conv_percent(t_str_conv *sub, va_list ap);
 size_t				ft_flag_picker(char *str, t_str_conv *sub, t_param *param);
 size_t				ft_flag_space(t_str_conv *sub, char *str);
