@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/11 12:13:22 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/21 14:22:27 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/22 14:23:00 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ t_conv	*ft_conv_lister(void)
 	if ((conv = ft_newconv(conv, "%", &ft_conv_percent)))
 		if ((conv = ft_newconv(conv, "s", &ft_conv_s)))
 			if ((conv = ft_newconv(conv, "c", &ft_conv_c)))
+			if ((conv = ft_newconv(conv, "C", &ft_conv_upc)))
 				if ((conv = ft_newconv(conv, "d", &ft_conv_d)))
 				if ((conv = ft_newconv(conv, "D", &ft_conv_upd)))
 					if ((conv = ft_newconv(conv, "i", &ft_conv_d)))

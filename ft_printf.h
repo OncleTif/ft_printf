@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/11 10:43:34 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/21 18:53:04 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/22 14:56:09 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,19 +17,19 @@
 
 typedef struct		s_str_conv
 {
-	char				error;
-	char				space;
-	char				zero;
-	char				plus;
-	char				hash;
-	char				minus;
-	char				point;
-	char				*str_out;
-	char				*opt;
-	size_t				size;
-	size_t				prec;
-	char*				type;
-	struct s_str_conv	*next;
+	char			error;
+	char			space;
+	char			zero;
+	char			plus;
+	char			hash;
+	char			minus;
+	char			point;
+	char			*str_out;
+	char			*opt;
+	size_t			size;
+	size_t			prec;
+	char*			type;
+	struct s_str_conv		*next;
 }					t_str_conv;
 
 typedef struct		s_flag
@@ -68,6 +68,7 @@ int					ft_endof_opt(char *str, t_conv *conv);
 size_t				ft_str_picker(char *str, t_str_conv **elem);
 char				*ft_conv_s(t_str_conv *sub, va_list ap);
 char				*ft_conv_c(t_str_conv *sub, va_list ap);
+char				*ft_conv_upc(t_str_conv *sub, va_list ap);
 char				*ft_conv_d(t_str_conv *sub, va_list ap);
 char				*ft_conv_upd(t_str_conv *sub, va_list ap);
 char				*ft_conv_o(t_str_conv *sub, va_list ap);
