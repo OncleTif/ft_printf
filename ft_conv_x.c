@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/19 18:32:38 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/26 12:51:48 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/26 12:59:53 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,7 @@ char	*ft_conv_x(t_str_conv *sub, va_list ap)
 			!(sub->str_out[0] == '0' && sub->str_out[1] == 0))
 		sub->str_out = ft_strjoin("0x", sub->str_out);
 	sub->size = ft_strlen(sub->str_out);
+	sub->plus = 0;
+	sub->space = 0;
 	return (sub->str_out);
 }
