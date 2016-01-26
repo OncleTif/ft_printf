@@ -1,24 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_conv_s.c                                        :+:      :+:    :+:   */
+/*   ft_precision_picker.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/19 17:48:21 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/26 13:08:00 by tmanet           ###   ########.fr       */
+/*   Created: 2016/01/26 13:20:28 by tmanet            #+#    #+#             */
+/*   Updated: 2016/01/26 13:26:01 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-char	*ft_conv_s(t_str_conv *sub, va_list ap)
+size_t	ft_precision_picker(t_str_conv *sub, char *str)
 {
-	sub->str_out = va_arg(ap, char*);
-	if (!sub->str_out)
-		sub->str_out = ft_strdup("(null)");
-	sub->size = ft_strlen(sub->str_out);
-	sub->plus = 0;
-	sub->space = 0;
-	return (sub->str_out);
+size_t i;
+
+i = 0;
+return (i + 1);
 }
