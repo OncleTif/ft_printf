@@ -1,41 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_flag_picker.c                                   :+:      :+:    :+:   */
+/*   ft_width_picker.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/19 11:37:46 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/26 13:41:01 by tmanet           ###   ########.fr       */
+/*   Created: 2016/01/26 13:39:06 by tmanet            #+#    #+#             */
+/*   Updated: 2016/01/26 13:39:23 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-size_t	ft_flag_picker(char *str, t_str_conv *sub, t_param *param)
+size_t	ft_width_picker(t_str_conv *sub, char *str)
 {
-	size_t	i;
-	t_flag	*flag;
+	size_t i;
 
 	i = 0;
-	if (sub)
+	while (str[i] && ft_isdigit(str[i]))
 	{
-		while (str[i])
-		{
-			flag = param->flag;
-			while (flag && !ft_strnequ(str + i, flag->ptn, flag->size))
-			{
-				flag = flag->next;
-			}
-			if (ft_isdigit(str[i]) && str[i] != '0')
-				i = i + ft_width_picker(sub, str + i);
-			else
-			{
-				if (!flag)
-					return (i);
-				i = i + flag->f(sub, str + i);
-			}
-		}
+		sub->width = sub->width * 10 + (str[i] - '0');
+		i++;
 	}
-	return (0);
+	return (i);
 }

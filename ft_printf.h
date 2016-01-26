@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/11 10:43:34 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/26 13:24:50 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/26 13:40:08 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ typedef struct		s_str_conv
 	char			*opt;
 	size_t			size;
 	size_t			prec;
+	size_t			width;
 	char*			type;
 	struct s_str_conv		*next;
 }					t_str_conv;
@@ -97,5 +98,6 @@ size_t				ft_flag_zero(t_str_conv *sub, char *str);
 void				ft_string_modifier(t_str_conv *sub);
 void				ft_plus_modifier(t_str_conv *sub);
 size_t				ft_precision_picker(t_str_conv *sub, char *str);
+size_t				ft_width_picker(t_str_conv *sub, char *str);
 void				ft_space_modifier(t_str_conv *sub);
 #endif
