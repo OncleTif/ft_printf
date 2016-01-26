@@ -1,36 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_prec_modifier.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/11 10:55:55 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/26 17:04:34 by tmanet           ###   ########.fr       */
+/*   Created: 2016/01/26 16:56:02 by tmanet            #+#    #+#             */
+/*   Updated: 2016/01/26 17:09:27 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdio.h>
-#include <limits.h>
 
-int	main(int argc, char **argv)
+void	ft_prec_modifier(t_str_conv *sub)
 {
-	int	i;
+	char	sign;
+	char	filler;
+	int		i;
 
-	i = 0;
-	if (argc && argv)
+	sign = 0;
+	filler = '0';
+	if (sub->str_out[0] == '+' || sub->str_out[0] == '-')
+		sign = sub->str_out[0];
+	i = sub->prec - sub->size - (sign);
+	if (i > 0)
 	{
-		;
+		sub->str_out = ft_strjoin(ft_memset(ft_strnew(i), filler, i),
+				sub->str_out);
+		if (sign && filler == '0')
+		{
+			sub->str_out[0] = sign;
+			sub->str_out[i] = filler;
+		}
+		sub->size = sub->size + i;
 	}
-	//i = ft_printf(argv[1], "abc");
-	ft_putendl("printf");
-	i = printf("printf :{%.4d", 42);
-	ft_putchar('\n');
-	ft_putnbrendl(i);
-	ft_putendl("ft_printf");
-	i = ft_printf("fttest :{%.4d", 42);
-	ft_putchar('\n');
-	ft_putnbrendl(i);
-	return (0);
 }

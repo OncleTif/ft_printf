@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/19 17:48:38 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/26 10:25:06 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/26 16:55:08 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,6 @@ char	*ft_conv_d(t_str_conv *sub, va_list ap)
 	else
 		sub->str_out = ft_itoa(va_arg(ap, int));
 	sub->size = ft_strlen(sub->str_out);
+	ft_prec_modifier(sub);
 	return (sub->str_out);
 }
