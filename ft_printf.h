@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/11 10:43:34 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/22 14:56:09 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/26 11:56:43 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ typedef struct		s_conv
 {
 	char			*ltr;
 	size_t			size;
+	int				less_flags;
 	char			*(*f)(t_str_conv*, va_list);
 	struct s_conv	*next;
 }					t_conv;
@@ -79,17 +80,21 @@ char				*ft_conv_u(t_str_conv *sub, va_list ap);
 char				*ft_conv_upu(t_str_conv *sub, va_list ap);
 char				*ft_conv_p(t_str_conv *sub, va_list ap);
 char				*ft_conv_percent(t_str_conv *sub, va_list ap);
-size_t				ft_flag_picker(char *str, t_str_conv *sub, t_param *param);
-size_t				ft_flag_space(t_str_conv *sub, char *str);
-size_t				ft_flag_point(t_str_conv *sub, char *str);
-size_t				ft_flag_zero(t_str_conv *sub, char *str);
 size_t				ft_flag_h(t_str_conv *sub, char *str);
+size_t				ft_flag_hash(t_str_conv *sub, char *str);
 size_t				ft_flag_hh(t_str_conv *sub, char *str);
 size_t				ft_flag_j(t_str_conv *sub, char *str);
 size_t				ft_flag_l(t_str_conv *sub, char *str);
 size_t				ft_flag_ll(t_str_conv *sub, char *str);
-size_t				ft_flag_plus(t_str_conv *sub, char *str);
 size_t				ft_flag_minus(t_str_conv *sub, char *str);
-size_t				ft_flag_hash(t_str_conv *sub, char *str);
+size_t				ft_flag_picker(char *str, t_str_conv *sub, t_param *param);
+size_t				ft_flag_plus(t_str_conv *sub, char *str);
+size_t				ft_flag_point(t_str_conv *sub, char *str);
+void				ft_flag_validator(t_str_conv *sub, t_conv *conv);
+size_t				ft_flag_space(t_str_conv *sub, char *str);
 size_t				ft_flag_z(t_str_conv *sub, char *str);
+size_t				ft_flag_zero(t_str_conv *sub, char *str);
+void				ft_string_modifier(t_str_conv *sub);
+void				ft_plus_modifier(t_str_conv *sub);
+void				ft_space_modifier(t_str_conv *sub);
 #endif
