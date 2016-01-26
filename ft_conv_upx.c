@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/25 13:00:15 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/26 10:52:16 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/26 12:31:18 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ char	*ft_conv_upx(t_str_conv *sub, va_list ap)
 		sub->str_out = ft_uitoa_base((unsigned char)va_arg(ap, unsigned int), 16, 'A');
 	else
 		sub->str_out = ft_uitoa_base(va_arg(ap, unsigned int), 16, 'A');
+	if (sub->str_out && sub->hash)
+		sub->str_out = ft_strjoin("0X", sub->str_out);
 	sub->size = ft_strlen(sub->str_out);
 	return (sub->str_out);
 }
