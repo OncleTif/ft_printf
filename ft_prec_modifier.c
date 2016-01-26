@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/26 16:56:02 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/26 17:09:27 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/26 17:16:50 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,11 @@ void	ft_prec_modifier(t_str_conv *sub)
 	filler = '0';
 	if (sub->str_out[0] == '+' || sub->str_out[0] == '-')
 		sign = sub->str_out[0];
-	i = sub->prec - sub->size - (sign);
+//	ft_putendl("prec :");
+//	ft_putnbrendl(sub->prec);
+//	ft_putendl("size :");
+//	ft_putnbrendl(sub->size);
+	i = sub->prec - (sub->size - (sign && 1));
 	if (i > 0)
 	{
 		sub->str_out = ft_strjoin(ft_memset(ft_strnew(i), filler, i),
@@ -32,6 +36,7 @@ void	ft_prec_modifier(t_str_conv *sub)
 			sub->str_out[0] = sign;
 			sub->str_out[i] = filler;
 		}
+//		ft_putendl(sub->str_out);
 		sub->size = sub->size + i;
 	}
 }
