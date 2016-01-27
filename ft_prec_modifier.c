@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/26 16:56:02 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/27 11:17:40 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/27 11:38:02 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	ft_prec_modifier(t_str_conv *sub)
 	filler = '0';
 	if (!sub->prec && ft_strequ(sub->str_out, "0"))
 	{
-		ft_strdel(&sub->str_out);
+		sub->str_out[0] = 0;
 		sub->size = 0;
 	}
 	else
