@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/11 10:43:34 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/26 16:55:43 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/27 14:03:43 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ typedef struct		s_str_conv
 	char			hash;
 	char			minus;
 	char			point;
+	char			star;
 	char			*str_out;
 	char			*opt;
 	size_t			size;
@@ -69,6 +70,7 @@ t_str_conv			*ft_strsplit_to_conv(char *str, t_param *param, va_list ap);
 int					ft_endof_opt(char *str, t_conv *conv);
 size_t				ft_str_picker(char *str, t_str_conv **elem);
 char				*ft_conv_s(t_str_conv *sub, va_list ap);
+char				*ft_conv_ups(t_str_conv *sub, va_list ap);
 char				*ft_conv_c(t_str_conv *sub, va_list ap);
 char				*ft_conv_upc(t_str_conv *sub, va_list ap);
 char				*ft_conv_d(t_str_conv *sub, va_list ap);
