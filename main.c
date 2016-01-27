@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/11 10:55:55 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/27 16:01:20 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/27 16:23:07 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,11 @@ int	main(int argc, char **argv)
 	}
 	//i = ft_printf(argv[1], "abc");
 	ft_putendl("printf");
-	i = printf("printf :{%*c}", -15, 0);
+	i = printf("printf :{%05.c}", 0);
 	ft_putchar('\n');
 	ft_putnbrendl(i);
 	ft_putendl("ft_printf");
-	i = ft_printf("fttest :{%*c}", -15, 0);
+	i = ft_printf("fttest :{%05.c}", 0);
 	ft_putchar('\n');
 	ft_putnbrendl(i);
 	return (0);
