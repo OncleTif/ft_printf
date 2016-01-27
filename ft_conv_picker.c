@@ -6,13 +6,13 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/12 16:24:56 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/27 15:27:00 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/27 18:00:55 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-size_t	ft_conv_picker(char *str, t_str_conv **elem, t_param *param, va_list ap)
+size_t	ft_conv_picker(char *str, t_str_conv **elem, t_param *param)
 {
 	t_str_conv	*sub;
 	t_conv		*conv;
@@ -43,7 +43,7 @@ size_t	ft_conv_picker(char *str, t_str_conv **elem, t_param *param, va_list ap)
 			str + i, conv->size);
 	if (!sub->opt)
 		return (i);
-	sub->str_out = conv->f(sub, ap);
+	sub->str_out = conv->f(sub);
 	ft_string_modifier(sub);
 	return (i + conv->size);
 }

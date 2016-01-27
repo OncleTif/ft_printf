@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/26 11:04:42 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/26 11:32:01 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/27 18:16:25 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,6 @@ void	ft_plus_modifier(t_str_conv *sub)
 	if (!ft_strchr(str, '-'))
 	{
 		sub->str_out = ft_strjoin("+", str);
-		//if (str)
-		//	ft_strdel(&str);
 		sub->size++;
 	}
 }

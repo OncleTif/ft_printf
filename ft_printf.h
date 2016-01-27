@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/11 10:43:34 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/27 14:21:14 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/27 18:08:06 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ typedef struct		s_conv
 	char			*ltr;
 	size_t			size;
 	int				less_flags;
-	char			*(*f)(t_str_conv*, va_list);
+	char			*(*f)(t_str_conv*);
 	struct s_conv	*next;
 }					t_conv;
 
@@ -63,26 +63,26 @@ t_flag				*ft_flag_lister();
 t_flag				*ft_newflag(t_flag *nxt, char *ptn, size_t (*f)(t_str_conv*, char*));
 t_param				*ft_param_builder(void);
 t_conv				*ft_conv_lister();
-t_conv				*ft_newconv(t_conv *nxt, char *ptn, char *(*f)(t_str_conv*, va_list));
-size_t				ft_conv_picker(char *str, t_str_conv **elem, t_param *param, va_list ap);
+t_conv				*ft_newconv(t_conv *nxt, char *ptn, char *(*f)(t_str_conv*));
+size_t				ft_conv_picker(char *str, t_str_conv **elem, t_param *param);
 int					ft_putcountstr(char *str);
 t_str_conv			*ft_strsplit_to_conv(char *str, t_param *param, va_list ap);
 int					ft_endof_opt(char *str, t_conv *conv);
 size_t				ft_str_picker(char *str, t_str_conv **elem);
-char				*ft_conv_s(t_str_conv *sub, va_list ap);
-char				*ft_conv_ups(t_str_conv *sub, va_list ap);
-char				*ft_conv_c(t_str_conv *sub, va_list ap);
-char				*ft_conv_upc(t_str_conv *sub, va_list ap);
-char				*ft_conv_d(t_str_conv *sub, va_list ap);
-char				*ft_conv_upd(t_str_conv *sub, va_list ap);
-char				*ft_conv_o(t_str_conv *sub, va_list ap);
-char				*ft_conv_upo(t_str_conv *sub, va_list ap);
-char				*ft_conv_x(t_str_conv *sub, va_list ap);
-char				*ft_conv_upx(t_str_conv *sub, va_list ap);
-char				*ft_conv_u(t_str_conv *sub, va_list ap);
-char				*ft_conv_upu(t_str_conv *sub, va_list ap);
-char				*ft_conv_p(t_str_conv *sub, va_list ap);
-char				*ft_conv_percent(t_str_conv *sub, va_list ap);
+char				*ft_conv_s(t_str_conv *sub);
+char				*ft_conv_ups(t_str_conv *sub);
+char				*ft_conv_c(t_str_conv *sub);
+char				*ft_conv_upc(t_str_conv *sub);
+char				*ft_conv_d(t_str_conv *sub);
+char				*ft_conv_upd(t_str_conv *sub);
+char				*ft_conv_o(t_str_conv *sub);
+char				*ft_conv_upo(t_str_conv *sub);
+char				*ft_conv_x(t_str_conv *sub);
+char				*ft_conv_upx(t_str_conv *sub);
+char				*ft_conv_u(t_str_conv *sub);
+char				*ft_conv_upu(t_str_conv *sub);
+char				*ft_conv_p(t_str_conv *sub);
+char				*ft_conv_percent(t_str_conv *sub);
 size_t				ft_flag_h(t_str_conv *sub, char *str);
 size_t				ft_flag_hash(t_str_conv *sub, char *str);
 size_t				ft_flag_hh(t_str_conv *sub, char *str);

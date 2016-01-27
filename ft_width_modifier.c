@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/26 14:20:39 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/27 17:34:12 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/27 18:18:35 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,6 @@ void	ft_width_modifier(t_str_conv *sub)
 		sign = sub->str_out[0];
 	if (sub->minus)
 	{
-		//sub->str_out = ft_strjoin(sub->str,
-		//		ft_memset(ft_strnew(i), filler, i));
 		str = sub->str_out;
 		sub->str_out = ft_memset(ft_strnew(sub->width), filler, sub->width);
 		sub->str_out = ft_memcpy(sub->str_out, str, sub->size);

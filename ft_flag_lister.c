@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/20 15:40:51 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/27 14:10:37 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/27 18:14:41 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ t_flag	*ft_flag_lister(void)
 
 	grp = 0;
 	flag = NULL;
-		if ((flag = ft_newflag(flag, "l", &ft_flag_l)))
+	if ((flag = ft_newflag(flag, "l", &ft_flag_l)))
 		if ((flag = ft_newflag(flag, "ll", &ft_flag_ll)))
 			if ((flag = ft_newflag(flag, "j", &ft_flag_j)))
 				if ((flag = ft_newflag(flag, "t", NULL)))

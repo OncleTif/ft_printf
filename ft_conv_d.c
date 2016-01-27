@@ -6,16 +6,15 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/19 17:48:38 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/27 15:03:59 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/27 17:56:02 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-char	*ft_conv_d(t_str_conv *sub, va_list ap)
+char	*ft_conv_d(t_str_conv *sub)
 {
 	int	i;
-
 
 	if (ft_strequ("ll", sub->type) || (ft_strequ("j", sub->type)))
 		sub->str_out = ft_lltoa_base(va_arg(sub->ap, long long), 10);

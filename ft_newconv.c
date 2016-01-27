@@ -6,13 +6,13 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/20 15:45:43 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/20 15:45:48 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/27 18:07:22 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-t_conv	*ft_newconv(t_conv *nxt, char *ptn, char *(*f)(t_str_conv*, va_list))
+t_conv	*ft_newconv(t_conv *nxt, char *ptn, char *(*f)(t_str_conv*))
 {
 	t_conv	*conv;
 

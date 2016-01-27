@@ -6,13 +6,13 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/19 17:48:21 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/27 14:29:35 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/27 18:01:26 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-char	*ft_conv_s(t_str_conv *sub, va_list ap)
+char	*ft_conv_s(t_str_conv *sub)
 {
 	sub->str_out = va_arg(sub->ap, char*);
 	if (!sub->str_out)
