@@ -6,7 +6,7 @@
 #    By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 09:19:22 by tmanet            #+#    #+#              #
-#    Updated: 2016/01/27 13:56:51 by tmanet           ###   ########.fr        #
+#    Updated: 2016/01/27 14:17:25 by tmanet           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,6 +46,7 @@ SRC =   ft_printf.c \
 		ft_flag_plus.c \
 		ft_flag_point.c \
 		ft_flag_space.c \
+		ft_flag_star.c \
 		ft_flag_validator.c \
 		ft_flag_z.c \
 		ft_flag_zero.c \

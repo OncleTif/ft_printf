@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_conv_p.c                                        :+:      :+:    :+:   */
+/*   ft_flag_star.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/21 14:20:35 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/27 14:46:18 by tmanet           ###   ########.fr       */
+/*   Created: 2016/01/27 14:05:37 by tmanet            #+#    #+#             */
+/*   Updated: 2016/01/27 14:53:41 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-char	*ft_conv_p(t_str_conv *sub, va_list ap)
+size_t	ft_flag_star(t_str_conv *sub, char *str)
 {
-	sub->str_out = ft_ultoa_base(va_arg(sub->ap, unsigned long), 16, 'a');
-	sub->size = ft_strlen(sub->str_out);
-	sub->plus = 0;
-	sub->space = 0;
-	if (sub->point)
-		ft_prec_modifier(sub);
-		sub->str_out = ft_strjoin("0x", sub->str_out);
-	sub->size = ft_strlen(sub->str_out);
-	return (sub->str_out);
+	int	size;
+
+	if (str)
+	{
+		size = va_arg(sub->ap, int);
+		if (size >= 0)
+			sub->width = size;
+		else
+		{
+			sub->width = -size;
+			sub->minus = 1;
+		}
+	}
+	return (1);
 }

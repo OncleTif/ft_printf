@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/22 12:43:12 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/27 13:53:41 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/27 14:47:38 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_conv_upc(t_str_conv *sub, va_list ap)
 {
 	sub->str_out = ft_strnew(1);
-	sub->str_out[0] = va_arg(ap, wchar_t);
+	sub->str_out[0] = va_arg(sub->ap, wchar_t);
 	sub->size = 1;
 	sub->plus = 0;
 	sub->space = 0;

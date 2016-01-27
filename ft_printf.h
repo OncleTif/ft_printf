@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/11 10:43:34 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/27 14:03:43 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/27 14:21:14 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,12 @@ typedef struct		s_str_conv
 	char			hash;
 	char			minus;
 	char			point;
-	char			star;
 	char			*str_out;
 	char			*opt;
 	size_t			size;
 	size_t			prec;
 	size_t			width;
+	va_list			ap;
 	char*			type;
 	struct s_str_conv		*next;
 }					t_str_conv;
@@ -95,6 +95,7 @@ size_t				ft_flag_plus(t_str_conv *sub, char *str);
 size_t				ft_flag_point(t_str_conv *sub, char *str);
 void				ft_flag_validator(t_str_conv *sub, t_conv *conv);
 size_t				ft_flag_space(t_str_conv *sub, char *str);
+size_t				ft_flag_star(t_str_conv *sub, char *str);
 size_t				ft_flag_z(t_str_conv *sub, char *str);
 size_t				ft_flag_zero(t_str_conv *sub, char *str);
 void				ft_string_modifier(t_str_conv *sub);
