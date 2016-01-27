@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/26 14:20:39 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/27 18:18:35 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/27 18:38:15 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ void	ft_width_modifier(t_str_conv *sub)
 {
 	char	sign;
 	char	filler;
-	char	*str;
 	size_t	i;
 
 	i = sub->width - sub->size;
@@ -28,20 +27,14 @@ void	ft_width_modifier(t_str_conv *sub)
 			sub->str_out[0] == ' ')
 		sign = sub->str_out[0];
 	if (sub->minus)
-	{
-		str = sub->str_out;
-		sub->str_out = ft_memset(ft_strnew(sub->width), filler, sub->width);
-		sub->str_out = ft_memcpy(sub->str_out, str, sub->size);
-	}
+		sub->str_out = ft_memcpy(ft_memset(ft_strnew(sub->width),
+					filler, sub->width), sub->str_out, sub->size);
 	else
 	{
 		sub->str_out = ft_strjoin(ft_memset(ft_strnew(i), filler, i),
 				sub->str_out);
-		if (sign && filler == '0')
-		{
-			sub->str_out[0] = sign;
+		if (sign && filler == '0' && (sub->str_out[0] = sign))
 			sub->str_out[i] = filler;
-		}
 	}
 	sub->size = sub->size + i;
 }
