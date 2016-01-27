@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/11 10:43:34 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/27 18:08:06 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/27 18:46:31 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,6 +83,7 @@ char				*ft_conv_u(t_str_conv *sub);
 char				*ft_conv_upu(t_str_conv *sub);
 char				*ft_conv_p(t_str_conv *sub);
 char				*ft_conv_percent(t_str_conv *sub);
+size_t				ft_conv_no(t_str_conv *sub, char *str);
 size_t				ft_flag_h(t_str_conv *sub, char *str);
 size_t				ft_flag_hash(t_str_conv *sub, char *str);
 size_t				ft_flag_hh(t_str_conv *sub, char *str);
