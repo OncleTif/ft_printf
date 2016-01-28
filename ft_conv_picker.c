@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/12 16:24:56 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/28 12:05:58 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/28 12:08:37 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,6 @@ size_t	ft_conv_picker(char *str, t_str_conv **elem, t_param *param)
 		conv = conv->next;
 	if (!conv)
 		return (ft_conv_no(sub, str + i) + i);
-	sub->opt = ft_strncpy(ft_strnew(conv->size),
-			str + i, conv->size);
-	if (!sub->opt)
-		return (i);
 	sub->str_out = conv->f(sub);
 	ft_string_modifier(sub);
 	return (i + conv->size);

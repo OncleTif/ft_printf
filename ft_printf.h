@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/11 10:43:34 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/27 18:46:31 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/28 12:11:03 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ typedef struct		s_str_conv
 	char			minus;
 	char			point;
 	char			*str_out;
-	char			*opt;
 	size_t			size;
 	size_t			prec;
 	size_t			width;
