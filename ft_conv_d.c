@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/19 17:48:38 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/27 17:56:02 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/28 11:42:55 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ char	*ft_conv_d(t_str_conv *sub)
 		sub->str_out = ft_ltoa_base(va_arg(sub->ap, size_t), 10);
 	else if (ft_strequ("hh", sub->type))
 		sub->str_out = ft_itoa((char)va_arg(sub->ap, int));
+	else if (ft_strequ("h", sub->type))
+		sub->str_out = ft_itoa((short)va_arg(sub->ap, int));
 	else
 		sub->str_out = ft_itoa(va_arg(sub->ap, int));
 	sub->size = ft_strlen(sub->str_out);
