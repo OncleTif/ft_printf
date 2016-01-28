@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/28 12:14:03 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/28 12:21:56 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/28 12:33:05 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,4 +14,18 @@
 
 void	ft_str_conv_cleaner(t_str_conv **elem)
 {
+	t_str_conv	*sub;
+
+	if (elem)
+	{
+		sub = *elem;
+		if (sub)
+		{
+			if (sub->next)
+				ft_str_conv_cleaner(&sub->next);
+			if (sub->str_out)
+				ft_strdel(&sub->str_out);
+			ft_memdel((void**)elem);
+		}
+	}
 }
