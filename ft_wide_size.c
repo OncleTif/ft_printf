@@ -1,37 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_wide_size.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/11 10:55:55 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/28 16:39:58 by tmanet           ###   ########.fr       */
+/*   Created: 2016/01/28 15:14:42 by tmanet            #+#    #+#             */
+/*   Updated: 2016/01/28 15:35:49 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdio.h>
-#include <limits.h>
-#include <locale.h>
 
-int	main(int argc, char **argv)
+size_t	ft_wide_size(unsigned int wide)
 {
-	setlocale(LC_ALL, "en_US.UTF-8");
-	int	i;
+	size_t	i;
 
 	i = 0;
-	if (argc && argv)
+	while (!(wide & 2147483648) && i < 32)
 	{
-		;
+		wide = wide << 1;
+		i++;
 	}
-	ft_putendl("printf");
-	i = printf("printf :{%C", 0);
-	ft_putchar('\n');
-	ft_putnbrendl(i);
-	ft_putendl("ft_printf");
-	i = ft_printf("fttest :{%C", 0);
-	ft_putchar('\n');
-	ft_putnbrendl(i);
-	return (0);
+	return (32 - i);
 }

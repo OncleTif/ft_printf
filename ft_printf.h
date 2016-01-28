@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/11 10:43:34 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/28 13:35:30 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/28 15:59:57 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,4 +112,6 @@ void				ft_width_modifier(t_str_conv *sub);
 size_t				ft_width_picker(t_str_conv *sub, char *str);
 void				ft_space_modifier(t_str_conv *sub);
 void				ft_str_conv_cleaner(t_str_conv **elem);
+size_t				ft_wide_size(unsigned int wide);
+char				*ft_wchartostr(wchar_t wide);
 #endif
