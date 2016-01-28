@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/11 10:43:34 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/28 13:24:10 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/28 13:35:30 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,9 @@
 # include "libft/libft.h"
 # include <stdarg.h>
 
-typedef struct		s_str_conv
+typedef struct s_str_conv	t_str_conv;
+
+struct				s_str_conv
 {
 	char			error;
 	char			space;
@@ -30,9 +32,9 @@ typedef struct		s_str_conv
 	size_t			prec;
 	size_t			width;
 	va_list			ap;
-	char*			type;
-	struct s_str_conv		*next;
-}					t_str_conv;
+	char			*type;
+	t_str_conv		*next;
+};
 
 typedef struct		s_flag
 {
@@ -60,11 +62,14 @@ typedef struct		s_param
 int					ft_printf(char *str, ...);
 int					ft_param_size(char *str, t_list *conv);
 t_flag				*ft_flag_lister();
-t_flag				*ft_newflag(t_flag *nxt, char *ptn, size_t (*f)(t_str_conv*, char*));
+t_flag				*ft_newflag(t_flag *nxt, char *ptn,
+		size_t (*f)(t_str_conv*, char*));
 t_param				*ft_param_builder(void);
 t_conv				*ft_conv_lister();
-t_conv				*ft_newconv(t_conv *nxt, char *ptn, char *(*f)(t_str_conv*));
-size_t				ft_conv_picker(char *str, t_str_conv **elem, t_param *param);
+t_conv				*ft_newconv(t_conv *nxt, char *ptn,
+		char *(*f)(t_str_conv*));
+size_t				ft_conv_picker(char *str, t_str_conv **elem,
+		t_param *param);
 int					ft_putcountstr(char *str);
 t_str_conv			*ft_strsplit_to_conv(char *str, t_param *param, va_list ap);
 int					ft_endof_opt(char *str, t_conv *conv);
