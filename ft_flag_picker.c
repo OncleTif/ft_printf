@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/19 11:37:46 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/26 13:41:01 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/28 12:06:11 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,5 @@ size_t	ft_flag_picker(char *str, t_str_conv *sub, t_param *param)
 			}
 		}
 	}
-	return (0);
+	return (i);
 }

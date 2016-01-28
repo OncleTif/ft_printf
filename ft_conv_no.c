@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/27 18:40:36 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/27 18:50:30 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/28 12:06:44 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,5 @@ size_t	ft_conv_no(t_str_conv *sub, char *str)
 		sub->str_out = ft_strdup("%");
 		sub->size = 0;
 	}
-	return ((str[i]) && 1);
+	return (str[i] != 0);
 }
