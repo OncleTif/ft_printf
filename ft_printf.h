@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/11 10:43:34 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/29 12:28:47 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/29 13:26:42 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,4 +115,5 @@ void				ft_str_conv_cleaner(t_str_conv **elem);
 size_t				ft_wide_size(unsigned int wide);
 char				*ft_wchartostr(wchar_t wide);
 size_t				ft_last_char(char *str, size_t size);
+void				ft_hash_for_hex(t_str_conv *sub, char *str);
 #endif

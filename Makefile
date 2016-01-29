@@ -6,7 +6,7 @@
 #    By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 09:19:22 by tmanet            #+#    #+#              #
-#    Updated: 2016/01/29 12:29:17 by tmanet           ###   ########.fr        #
+#    Updated: 2016/01/29 13:27:04 by tmanet           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,6 +45,7 @@ SRC =   ft_printf.c \
 		ft_flag_j.c \
 		ft_flag_l.c \
 		ft_last_char.c \
+		ft_hash_for_hex.c \
 		ft_flag_ll.c \
 		ft_flag_minus.c \
 		ft_flag_plus.c \
