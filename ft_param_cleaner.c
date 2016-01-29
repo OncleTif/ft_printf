@@ -1,31 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_conv_cleaner.c                              :+:      :+:    :+:   */
+/*   ft_param_cleaner.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/28 12:14:03 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/29 14:51:11 by tmanet           ###   ########.fr       */
+/*   Created: 2016/01/29 14:52:14 by tmanet            #+#    #+#             */
+/*   Updated: 2016/01/29 15:18:50 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_str_conv_cleaner(t_str_conv **elem)
+int	ft_param_cleaner(t_param **param, t_str_conv **conv)
 {
-	t_str_conv	*sub;
+	t_param	*prm;
 
-	if (elem)
-	{
-		sub = *elem;
-		if (sub)
-		{
-			if (sub->next)
-				ft_str_conv_cleaner(&sub->next);
-			if (sub->str_out)
-				ft_strdel(&sub->str_out);
-			ft_memdel((void**)elem);
-		}
-	}
+	prm = *param;
+	ft_conv_cleaner(&prm->conv);
+	ft_flag_cleaner(&prm->flag);
+	ft_memdel((void**)param);
+	ft_str_conv_cleaner(conv);
+	return (-1);
 }

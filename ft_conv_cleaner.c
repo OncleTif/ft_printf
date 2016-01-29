@@ -1,31 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_conv_cleaner.c                              :+:      :+:    :+:   */
+/*   ft_conv_cleaner.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/28 12:14:03 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/29 14:51:11 by tmanet           ###   ########.fr       */
+/*   Created: 2016/01/29 15:01:21 by tmanet            #+#    #+#             */
+/*   Updated: 2016/01/29 15:13:24 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_str_conv_cleaner(t_str_conv **elem)
+void	ft_conv_cleaner(t_conv **conv)
 {
-	t_str_conv	*sub;
+	t_conv	*cnv;
 
-	if (elem)
+	if (conv)
 	{
-		sub = *elem;
-		if (sub)
+		cnv = *conv;
+		if (cnv)
 		{
-			if (sub->next)
-				ft_str_conv_cleaner(&sub->next);
-			if (sub->str_out)
-				ft_strdel(&sub->str_out);
-			ft_memdel((void**)elem);
+			if (cnv->next)
+				ft_conv_cleaner(&cnv->next);
+			ft_memdel((void**)conv);
 		}
 	}
 }

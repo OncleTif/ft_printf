@@ -6,7 +6,7 @@
 #    By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 09:19:22 by tmanet            #+#    #+#              #
-#    Updated: 2016/01/29 13:27:04 by tmanet           ###   ########.fr        #
+#    Updated: 2016/01/29 15:11:34 by tmanet           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,6 +36,9 @@ SRC =   ft_printf.c \
 		ft_space_modifier.c \
 		ft_strsplit_to_conv.c \
 		ft_str_conv_cleaner.c \
+		ft_conv_cleaner.c \
+		ft_flag_cleaner.c \
+		ft_param_cleaner.c \
 		ft_str_picker.c \
 		ft_string_modifier.c \
 		ft_plus_modifier.c \

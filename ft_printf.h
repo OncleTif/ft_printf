@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/11 10:43:34 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/29 13:26:42 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/29 15:18:48 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ struct				s_str_conv
 	char			point;
 	char			*str_out;
 	size_t			size;
-	size_t			muted;
 	size_t			prec;
 	size_t			width;
 	va_list			ap;
@@ -112,6 +111,9 @@ void				ft_width_modifier(t_str_conv *sub);
 size_t				ft_width_picker(t_str_conv *sub, char *str);
 void				ft_space_modifier(t_str_conv *sub);
 void				ft_str_conv_cleaner(t_str_conv **elem);
+int					ft_param_cleaner(t_param **param, t_str_conv **elem);
+void				ft_conv_cleaner(t_conv **conv);
+void				ft_flag_cleaner(t_flag **flag);
 size_t				ft_wide_size(unsigned int wide);
 char				*ft_wchartostr(wchar_t wide);
 size_t				ft_last_char(char *str, size_t size);
