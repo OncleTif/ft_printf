@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/20 18:14:03 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/27 18:02:16 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/29 16:06:00 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ char	*ft_conv_upo(t_str_conv *sub)
 	if (sub->point)
 		ft_prec_modifier(sub);
 	if (sub->hash && sub->str_out[0] != '0')
-		sub->str_out = ft_strjoin("0", sub->str_out);
+		sub->str_out = ft_strjoin_clean(ft_strdup("0"), sub->str_out);
 	sub->size = ft_strlen(sub->str_out);
 	return (sub->str_out);
 }

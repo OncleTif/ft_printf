@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/25 13:00:15 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/27 18:17:53 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/29 16:02:18 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,12 @@ char	*ft_conv_upx(t_str_conv *sub)
 					unsigned int), 16, 'A');
 	else
 		sub->str_out = ft_uitoa_base(va_arg(sub->ap, unsigned int), 16, 'A');
-	if (sub->str_out && sub->hash &&
-			!(sub->str_out[0] == '0' && sub->str_out[1] == 0))
-		sub->str_out = ft_strjoin("0X", sub->str_out);
 	sub->size = ft_strlen(sub->str_out);
 	sub->plus = 0;
 	sub->space = 0;
 	if (sub->point)
 		ft_prec_modifier(sub);
+	if (sub->hash)
+		ft_hash_for_hex(sub, "0X");
 	return (sub->str_out);
 }

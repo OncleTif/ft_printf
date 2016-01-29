@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/26 11:35:02 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/27 18:17:15 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/29 15:56:24 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_space_modifier(t_str_conv *sub)
 	str = sub->str_out;
 	if (!ft_strchr(str, '-'))
 	{
-		sub->str_out = ft_strjoin(" ", str);
+		sub->str_out = ft_strjoin_clean(ft_strdup(" "), str);
 		sub->size++;
 	}
 }
