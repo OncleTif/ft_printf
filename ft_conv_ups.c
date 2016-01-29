@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/27 13:55:16 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/28 16:55:03 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/29 11:53:07 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,15 @@ char	*ft_conv_ups(t_str_conv *sub)
 	wchar_t	*str;
 
 	str = va_arg(sub->ap, wchar_t*);
-	while (*str)
+	if (!str)
+		sub->str_out = ft_strdup("(null)");
+	while (str && *str)
 	{
-		ft_strjoin(sub->str_out, ft_wchartostr(*str));
+		sub->str_out = ft_strjoin_clean(sub->str_out, ft_wchartostr(*str));
 		str++;
 	}
-	if (!sub->str_out)
-		sub->str_out = ft_strdup("(null)");
-	sub->size = ft_strlen(sub->str_out);
+	if (sub->str_out)
+		sub->size = ft_strlen(sub->str_out);
 	sub->plus = 0;
 	sub->space = 0;
 	if (sub->point && sub->size > sub->prec)
