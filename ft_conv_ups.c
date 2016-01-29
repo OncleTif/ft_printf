@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/27 13:55:16 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/29 11:53:07 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/29 12:57:20 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,6 @@ char	*ft_conv_ups(t_str_conv *sub)
 	sub->plus = 0;
 	sub->space = 0;
 	if (sub->point && sub->size > sub->prec)
-		sub->size = sub->prec;
+		sub->size = ft_last_char(sub->str_out, sub->prec);
 	return (sub->str_out);
 }

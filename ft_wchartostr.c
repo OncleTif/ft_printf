@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/28 15:43:02 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/28 16:42:44 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/29 13:01:07 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,7 @@ char	*ft_wchartostr(wchar_t wide)
 	size_t	size;
 	char	*ret;
 
-	size = ft_wide_size((unsigned int)wide);
-	if (!size)
+	if (!(size = ft_wide_size((unsigned int)wide)))
 		ret = ft_memalloc(1);
 	else if (size < 8)
 		ret = ft_memset(ft_strnew(1), wide, 1);
