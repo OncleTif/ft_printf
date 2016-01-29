@@ -6,7 +6,7 @@
 /*   By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/26 16:56:02 by tmanet            #+#    #+#             */
-/*   Updated: 2016/01/27 18:31:29 by tmanet           ###   ########.fr       */
+/*   Updated: 2016/01/29 13:42:49 by tmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	ft_prec_modifier(t_str_conv *sub)
 		i = sub->prec - (sub->size - (sign && 1));
 		if (i > 0)
 		{
-			sub->str_out = ft_strjoin(ft_memset(ft_strnew(i), '0', i),
+			sub->str_out = ft_strjoin_clean(ft_memset(ft_strnew(i), '0', i),
 					sub->str_out);
 			if (sign && (sub->str_out[0] = sign))
 				sub->str_out[i] = '0';
