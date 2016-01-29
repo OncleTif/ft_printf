@@ -6,7 +6,7 @@
 #    By: tmanet <tmanet@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 09:19:22 by tmanet            #+#    #+#              #
-#    Updated: 2016/01/29 15:11:34 by tmanet           ###   ########.fr        #
+#    Updated: 2016/01/29 16:37:51 by tmanet           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -102,7 +102,3 @@ $(LIB):
 	make -C libft
 
 re: fclean all
-
-test: all
-	$(CC) $(FLAGS) -c main.c
-	gcc -L./ -lftprintf $(FLAGS) main.o ./libftprintf.a
